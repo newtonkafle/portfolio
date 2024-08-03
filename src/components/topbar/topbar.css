@@ -1,0 +1,44 @@
+.topbar {
+  position: fixed;
+  background-color: var(--body-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 1% 0%;
+  margin-left: 5%;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  width: 90%;
+  height: 7%;
+  justify-content: space-between;
+  z-index: 5;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__link:focus {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow);
+  color: var(--text-color);
+}
+
+.copyright {
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+}

@@ -1,8 +1,32 @@
+import { useEffect, useState } from "react";
 import Logo from "../../assets/logo.svg";
 import "./topbar.css";
 const Topbar = () => {
+  const [topBarPosition, setTopBarPosition] = useState(5);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        if (!isScrolling) setIsScrolling(true);
+        setTopBarPosition(2);
+      } else {
+        if (isScrolling) setIsScrolling(false);
+        setTopBarPosition(5);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolling]);
+
   return (
-    <div className='topbar'>
+    <div
+      className={`topbar ${isScrolling ? "scrolling" : ""}`}
+      style={{ top: `${topBarPosition}%` }}
+    >
       <a href='#home' className='nav__logo'>
         <img src={Logo} alt='home logo' />
       </a>
@@ -39,8 +63,8 @@ const Topbar = () => {
         </div>
       </nav>
 
-      <div className='nav-footer'>
-        <span className='copyright'>&copy; 2023-2024.</span>
+      <div className='resume'>
+        <span className='copyright'>Resume</span>
       </div>
     </div>
   );

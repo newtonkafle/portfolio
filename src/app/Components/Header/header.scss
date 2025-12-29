@@ -1,0 +1,143 @@
+@use "/src/styles/variables";
+
+$screen: 768px;
+
+.header {
+ 
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 0;
+  
+
+  &__nav {    
+    display: flex;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 1.7rem;
+    border: 3.5px double var(--border);
+    box-shadow: var(--shadow-double-line);
+    border-radius: 8px;
+    background-color: var(--surface);
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    opacity: 0.6;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+   
+
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+
+    &_active {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    &:hover {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background-color: transparent;
+      transform: translateY(-3px);
+      letter-spacing: 0.5px;
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    gap: 8px;
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+      display: block;
+      color: var(--text-primary);
+      opacity: 0.6;
+    }
+
+    &__link {
+      color: inherit;
+    }
+
+  }
+
+  &__toggle {
+    display: none;
+    background:none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin: 4px 0;
+    }
+  }
+
+  &__theme-toggle {
+    transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+
+    svg {
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem;
+      color: var(--text-primary);
+      padding: 0.3rem 0.7rem;
+      opacity: 0.6;
+
+      &:hover{
+      opacity: 1;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background-color: transparent;
+      transform: translateY(-3px);
+
+
+      }
+      
+    }
+  }
+
+  @media (max-width: var(--desktopScreen)) {
+    padding-top: 16px;
+
+    &__links {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+
+  @media (max-width: var(--tabletScreen)) {
+    .header {
+      &__nav--open{
+        display: flex;
+      }
+    }
+  }
+}

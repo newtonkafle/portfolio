@@ -1,0 +1,65 @@
+.footer {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0rem 1rem;
+  flex-shrink: 0;
+
+  // holds the footer component
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  // the copyright text in the left corner
+  &__copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  // the text stack description on teh right corner
+  &__techstack {
+    display: flex;
+    gap: 0.3rem;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    align-items: center;
+  }
+
+  // highlights of the tech stack component e.g Vanilla Ts and Vite
+  &__highlight {
+    color: var(--text-primary);
+    font-weight: 700;
+    //making cloud like structure 
+    background: rgba(187, 171, 140, 0.25); // Your #BBAB8C color with transparency
+    border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+    //adding simple transition 
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+      background: rgba(187, 171, 140, 0.3);
+    // On hover, we "jiggle" the cloud shape slightly
+    border-radius: 40% 60% 30% 70% / 50% 40% 50% 60%;
+    }
+  }
+
+  &__emoji {
+    display: inline-block;
+    font-size: 1.5rem;
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+}

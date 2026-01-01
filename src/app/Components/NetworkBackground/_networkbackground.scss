@@ -1,0 +1,42 @@
+.network-backgound {
+  position: absolute; // Keeps it relative to the home section
+  inset: 0; // Fits to all four corners
+  z-index: 1; // Sends it to the back
+  overflow: hidden; // Hides any parts of the SVG that overflow
+  background-color: transparent;
+  pointer-events: none;
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+
+  .plexus-svg {
+    /* Controls the position and repetition of your pattern */
+    display: block;
+    overflow: visible;
+
+    &__lines {
+      path {
+        fill: none; // Makes the "inside" transparent
+        stroke: #bbab8c; // Your $accent
+        stroke-width: 0.5px; // Very thin border line
+        stroke-opacity: 0.4;
+
+        /* This keeps the line thin even if the screen is large */
+        vector-effect: non-scaling-stroke;
+      }
+    }
+
+    &__dots {
+      circle {
+        fill: #bbab8c;
+        fill-opacity: 0.6;
+      }
+    }
+  }
+
+  /* Optional: Fades the network into your main background color at the edges */
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}

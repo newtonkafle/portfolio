@@ -4,13 +4,13 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 15px;
-  min-height:0;
+  min-height: 0;
   // padding-top: 10%;
   // padding-bottom: 10%;
-  padding-left: 2rem;
+  padding-left: 3rem;
   // padding-right: 4rem;
   justify-content: center;
-  
+  z-index: 2;
 
   &__status {
     max-width: 250px;
@@ -24,32 +24,30 @@
     align-items: center;
     align-self: flex-end;
     gap: 20px;
-  
   }
 
   &__glowing-circle {
-      width: 12px;
-      height: 12px;
-      background-color: var(--surface);
-      border-radius: 50%;
-      position:relative;
-      z-index: 3;
-      animation: glow 2s infinite ease-in-out;
-      padding: 0;
-    }
+    width: 12px;
+    height: 12px;
+    background-color: var(--surface);
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    animation: glow 2s infinite ease-in-out;
+    padding: 0;
+  }
 
   &__container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding:0.5rem;
+    padding: 0.5rem;
   }
 
   &__status-text {
-    padding:0;
+    padding: 0;
     font-weight: 600;
   }
-
 
   &__image {
     border-radius: inherit;
@@ -58,20 +56,21 @@
   }
 
   &__content {
-    flex:2;
-    padding: 2rem 2rem;
+    // border: 3px double var(--border);
+    border-radius: 8px;
+    flex: 2;
+    padding: 1rem 1rem;
     // padding-right: 2rem;
     // padding-left: 1rem;
     gap: 0;
-    margin: 0;
-
+    margin: 0 2rem;
   }
 
   &__name {
     margin: 0;
     font-size: 1.5rem;
     font-family: var(--font-art);
- }
+  }
 
   &__title {
     display: flex;
@@ -79,7 +78,7 @@
     padding: 0rem 0rem 1rem 0rem;
     gap: 5px;
     flex-wrap: wrap;
-  
+
     &__name {
       margin: 0;
       font-family: var(--font-heading);
@@ -88,15 +87,11 @@
       letter-spacing: 1px;
       flex-wrap: nowrap;
       white-space: nowrap;
-
-   
-    
     }
 
     &__seperator {
       font-size: 2rem;
       letter-spacing: -0.1rem;
-    
     }
 
     &__description {
@@ -104,39 +99,37 @@
       font-weight: 500;
       margin: 0;
       padding: 0;
+    }
+  }
+  &__description {
   }
 
-  }
- &__description {
-   
- } 
+  &__button {
+    display: inline-flex;
+    padding: 0.7rem 1.7rem;
+    margin: 1rem 0;
+    justify-content: center;
+    background-color: var(--accent);
+    color: var(--btn-text);
+    border: 3px double var(--btn-border);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+      transform 0.2s ease;
+    box-shadow: var(--shadow-double-line);
+    border-radius: 8px;
+    gap: 5px;
 
- &__button {
-  display: inline-flex;
-  padding: 0.7rem 1.7rem;
-  margin: 1rem 0;
-  justify-content: center;
-  background-color: var(--accent);
-  color: var(--btn-text);
-  border: 3px double var(--btn-border);
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-  box-shadow: var(--shadow-double-line);
-  border-radius: 8px;
-  gap: 5px;
+    &:hover {
+      background-color: var(--btn-hover-bg);
+      border-color: var(--btn-hover-bg);
+      transform: translateY(-2px);
+    }
 
-  &:hover {
-    background-color: var(--btn-hover-bg);
-    border-color: var(--btn-hover-bg);
-    transform: translateY(-2px);
+    svg {
+      width: 2rem;
+    }
   }
-
-  svg {
-    width: 2rem;
-  }
- }
-  
 
   &__illustrations {
     position: relative;
@@ -147,18 +140,17 @@
     border-radius: 32px;
 
     //creating animated picture with string
-    --line-height:100vh;
-
+    --line-height: 100vh;
 
     //the pivot line
     transform-origin: center calc(var(--line-height) * -1);
     transition: transform 0.8s ease-out;
-    
+
     &.is-swinging {
       animation: swing-move 4.5s ease-in-out forwards;
     }
 
-  // the line that hangs the image 
+    // the line that hangs the image
     &::before {
       content: "";
       position: absolute;
@@ -174,44 +166,53 @@
       left: 50%;
       transform: translate(-50%);
       z-index: 1;
-
     }
- }
-
- @keyframes swing-move {
-  0%   { transform: rotate(0deg); }
-  20%  { transform: rotate(3deg); }    /* Swing Right */
-  40%  { transform: rotate(-2deg); }   /* Swing Left */
-  60%  { transform: rotate(2deg); }    /* Decelerating Right */
-  80%  { transform: rotate(-1deg); }   /* Decelerating Left */
-  100% { transform: rotate(0deg); }    /* Back to Center */
-}
-
-
-@keyframes glow {
-  0% {
-    /* Tight, slightly darker shadow to create a "border" effect first */
-    box-shadow: 0 0 0 0 rgba(187, 171, 140, 0.9);
-    transform: scale(0.98);
-    filter: brightness(1);
   }
-  50% {
-    /* 1. The Core: Pure white/very light version of your accent for high contrast */
-    /* 2. The Aura: Your accent color but with a huge 30px spread */
-    box-shadow: 0 0 8px 2px rgba(255, 250, 240, 0.6), 
-                0 0 25px 15px rgba(187, 171, 140, 0.4);
-    transform: scale(1.1);
-    filter: brightness(1.1); /* Makes the circle itself look like it's lighting up */
+
+  @keyframes swing-move {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(3deg);
+    } /* Swing Right */
+    40% {
+      transform: rotate(-2deg);
+    } /* Swing Left */
+    60% {
+      transform: rotate(2deg);
+    } /* Decelerating Right */
+    80% {
+      transform: rotate(-1deg);
+    } /* Decelerating Left */
+    100% {
+      transform: rotate(0deg);
+    } /* Back to Center */
   }
-  100% {
-    box-shadow: 0 0 0 0 rgba(187, 171, 140, 0);
-    transform: scale(0.98);
-    filter: brightness(1);
+
+  @keyframes glow {
+    0% {
+      /* Tight, slightly darker shadow to create a "border" effect first */
+      box-shadow: 0 0 0 0 rgba(187, 171, 140, 0.9);
+      transform: scale(0.98);
+      filter: brightness(1);
+    }
+    50% {
+      /* 1. The Core: Pure white/very light version of your accent for high contrast */
+      /* 2. The Aura: Your accent color but with a huge 30px spread */
+      box-shadow: 0 0 8px 2px rgba(255, 250, 240, 0.6),
+        0 0 25px 15px rgba(187, 171, 140, 0.4);
+      transform: scale(1.1);
+      filter: brightness(
+        1.1
+      ); /* Makes the circle itself look like it's lighting up */
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(187, 171, 140, 0);
+      transform: scale(0.98);
+      filter: brightness(1);
+    }
   }
-}
-
-
-
 }
 
 h1 {
@@ -221,4 +222,3 @@ h1 {
 h2 {
   margin: 0;
 }
-

@@ -3,13 +3,12 @@
 $screen: 768px;
 
 .header {
- 
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem 0;
-  
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 0;
+  z-index: 2;
 
-  &__nav {    
+  &__nav {
     display: flex;
     gap: 2rem;
     max-width: 600px;
@@ -45,7 +44,6 @@ $screen: 768px;
       height: 24px;
       display: block;
     }
-   
 
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
 
@@ -79,12 +77,11 @@ $screen: 768px;
     &__link {
       color: inherit;
     }
-
   }
 
   &__toggle {
     display: none;
-    background:none;
+    background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
@@ -108,16 +105,13 @@ $screen: 768px;
       padding: 0.3rem 0.7rem;
       opacity: 0.6;
 
-      &:hover{
-      opacity: 1;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background-color: transparent;
-      transform: translateY(-3px);
-
-
+      &:hover {
+        opacity: 1;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background-color: transparent;
+        transform: translateY(-3px);
       }
-      
     }
   }
 
@@ -135,7 +129,7 @@ $screen: 768px;
 
   @media (max-width: var(--tabletScreen)) {
     .header {
-      &__nav--open{
+      &__nav--open {
         display: flex;
       }
     }

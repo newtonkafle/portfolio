@@ -110,7 +110,67 @@
       "Organization",
       "Dependability"
     ],
-    "hardSkills": ["python"]
+    "hardSkills": [
+      {
+        "name": "Python",
+        "detail_title": "Scripting & Automation",
+        "description": "Developing robust backends and automation scripts with a focus on clean, PEP8-compliant code.",
+        "category": "language"
+      },
+      {
+        "name": "C#",
+        "detail_title": "Enterprise Logic",
+        "description": "Building scalable server-side applications and complex business logic using the .NET ecosystem.",
+        "category": "language"
+      },
+      {
+        "name": "ASP.NET Core",
+        "detail_title": "Web API Development",
+        "description": "Architecting RESTful services with high security standards and middleware optimization.",
+        "category": "framework"
+      },
+      {
+        "name": "TypeScript",
+        "detail_title": "Typed Architecture",
+        "description": "Implementing type-safe frontend and backend logic to reduce runtime errors and improve maintainability.",
+        "category": "language"
+      },
+      {
+        "name": "PostgreSQL",
+        "detail_title": "Database Design",
+        "description": "Expertise in relational modeling, indexing strategies, and writing high-performance SQL queries.",
+        "category": "database"
+      },
+      {
+        "name": "AWS",
+        "detail_title": "Cloud Infrastructure",
+        "description": "Deploying and managing scalable environments using EC2, S3, and Lambda functions.",
+        "category": "cloud"
+      },
+      {
+        "name": "Docker",
+        "detail_title": "Containerization",
+        "description": "Creating consistent development environments and streamlining CI/CD deployment pipelines.",
+        "category": "devops"
+      },
+      {
+        "name": "Linux",
+        "detail_title": "System Administration",
+        "description": "Managing remote servers, bash scripting, and optimizing environment configurations.",
+        "category": "os"
+      },
+      {
+        "name": "Nginx",
+        "detail_title": "Traffic Management",
+        "description": "Configuring reverse proxies, load balancing, and SSL termination for secure web traffic.",
+        "category": "devops"
+      },
+      {
+        "name": "System Design",
+        "detail_title": "Scalable Architecture",
+        "description": "Designing distributed systems that prioritize availability, reliability, and low latency.",
+        "category": "architecture"
+      }
+    ]
   }
 }
-  

@@ -1,26 +1,48 @@
 import "./_skills.scss";
-interface skills {
-    softSkills: Array<string>,
-    hardSkills: Array<string>,
+
+interface HardSkills {
+  name: string;
+  detail_title: string;
+  description: string;
+  category: string;
 }
-export function createSkillsBar(skills:skills) {
-    const section = document.createElement('section');
-    section.classList.add("skills");
+interface skills {
+  softSkills: Array<string>;
+  hardSkills: Array<HardSkills>;
+}
+export function createSkillsBar(skills: skills) {
+  const section = document.createElement("section");
+  section.classList.add("skills");
 
-    section.innerHTML = `
+  // Use optional chaining (?.) and fallbacks ([]) to prevent errors
+  const softSkillsHTML = (skills?.softSkills || [])
+    .map(
+      (skill: string) => `
+      <div class="skills__soft__item">
+        <span class="skills__dot"></span>
+        <span class="skills__text">${skill}</span>
+      </div>`
+    )
+    .join("");
+
+  const hardSkillsHTML = (skills?.hardSkills || [])
+    .map(
+      (skill: any) => `
+      <div class="skills__hard__item">
+        <span class="skills__dot"></span>
+        <span class="skills__text">${skill.name}</span>
+      </div>`
+    )
+    .join("");
+
+  section.innerHTML = `
     <div class="skills__soft">
-        ${skills.softSkills.map(skill => 
-            `<div class="skills__item">
-                <span class="skills__dot"></span>
-                ${skill}
-            </div>`
-        ).join('')}
+        ${softSkillsHTML}
     </div>
-
     <div class="skills__hard">
-    
+        ${hardSkillsHTML}${hardSkillsHTML}
     </div>
-    `;
+  `;
 
-    return section;
+  return section;
 }

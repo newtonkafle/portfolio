@@ -5,7 +5,7 @@
   box-sizing: border-box;
   padding: 0rem 1rem;
   flex-shrink: 0;
-
+  z-index: 2;
   // holds the footer component
   &__main {
     display: flex;
@@ -37,17 +37,22 @@
   &__highlight {
     color: var(--text-primary);
     font-weight: 700;
-    //making cloud like structure 
-    background: rgba(187, 171, 140, 0.25); // Your #BBAB8C color with transparency
+    //making cloud like structure
+    background: rgba(
+      187,
+      171,
+      140,
+      0.25
+    ); // Your #BBAB8C color with transparency
     border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
-    //adding simple transition 
+    //adding simple transition
     transition: all 0.3s ease;
 
     &:hover {
       color: var(--accent);
       background: rgba(187, 171, 140, 0.3);
-    // On hover, we "jiggle" the cloud shape slightly
-    border-radius: 40% 60% 30% 70% / 50% 40% 50% 60%;
+      // On hover, we "jiggle" the cloud shape slightly
+      border-radius: 40% 60% 30% 70% / 50% 40% 50% 60%;
     }
   }
 
@@ -58,8 +63,12 @@
   }
 
   @keyframes floating {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
 }

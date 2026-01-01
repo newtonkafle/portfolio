@@ -1,17 +1,16 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: inherit;
-  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header" "main view" "footer footer";
   max-width: 1300px;
+  width: 1300px;
+  height: calc(100vh - 1rem);
   min-height: calc(100vh - 1rem);
   margin: 1rem auto 0 auto;
   background-color: var(--outer-bg);
   border: 3.5px double var(--border);
   box-shadow: var(--shadow-dobule-line);
   border-radius: 8px;
-  overflow: hidden;
 
   &__background {
     /* 1. We use 'fixed' so it stays on screen even when scrolling */

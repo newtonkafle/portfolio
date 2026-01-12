@@ -1,0 +1,8 @@
+.view-container {
+  display: flex;
+  grid-area: view;
+  flex-direction: column;
+  z-index: 2;
+  width: 1300px;
+  justify-content: center;
+}

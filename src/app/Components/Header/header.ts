@@ -4,13 +4,12 @@ import "./header.scss";
 interface NavItem {
   name: string;
   href: string;
-  icon:string;
+  icon: string;
 }
-
 
 interface HeaderProps {
   logo: string;
-  modeDarkLightIcon:string;
+  modeDarkLightIcon: string;
   navItems: NavItem[];
 }
 export function createHeader(t: HeaderProps): HTMLElement {
@@ -41,25 +40,20 @@ export function createHeader(t: HeaderProps): HTMLElement {
     <!-- Light SwitchMode Section -->
     <a class="header__theme-toggle">${t.modeDarkLightIcon}</a>
     <!-- Hamburger -->
-    <button class="header__toggle" id="nav-toggle" aria-label="toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-    </button>
+  
             
 
     `;
 
-
   //hamburger toggle
   const toggle = document.getElementById("nav-toggle");
-  const nav = document.getElementById("main-nav")
-  console.log(toggle)
+  const nav = document.getElementById("main-nav");
+  console.log(toggle);
 
   toggle?.addEventListener("click", () => {
-    alert('clicked');
-    nav?.classList.toggle("header__nav--open")
+    alert("clicked");
+    nav?.classList.toggle("header__nav--open");
   });
-  
+
   return header;
 }

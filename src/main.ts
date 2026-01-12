@@ -1,8 +1,7 @@
 import "./styles/style.scss";
-import { createHome } from "./app/Views/Home";
+import { createLayout } from "./Layout/Layout";
 const app = document.getElementById("app") as HTMLElement;
 
+const mainContainer = createLayout();
 
-
-//appending the page/container
-app.appendChild(createHome());
+app.appendChild(mainContainer);

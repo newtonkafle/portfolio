@@ -2,18 +2,19 @@
 
 //light color theme
 $light-theme: (
-  outer-bg: #fbfbf6,
-  bg: #f9f9f9,
+  outer-bg: #fffdf1,
+  bg: #f9f7ee,
   bg-rgb: (
     187,
     171,
     140,
   ),
-  surface: #faeed1,
+  surface: #ffce99,
   border: #ded0b6,
   accent: #bbab8c,
 
   text-primary: #2b2b2b,
+  text-highlight: #562f00,
   text-secondary: #6b6558,
 
   btn-bg: #bbab8c,
@@ -26,6 +27,7 @@ $light-theme: (
   font-body: "'Lato', 'Helvetica', sans-serif",
   font-art: "'Delius Swash Caps', 'cursive', sans-serif",
   font-mono: "'JetBrains Mono', monospace",
+  font-body-1: "'Inter', sans-serif",
 );
 
 $dark-theme: (

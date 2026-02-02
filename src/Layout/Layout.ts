@@ -9,7 +9,7 @@ export function createLayout() {
   // this container will be a base for router to draw different pages
   const viewContainer = createView();
 
-  // container which holds static and dynamic content
+  // this container is used only to work with backgrounds and layout
   const mainContainer = createBackground();
 
   // aligned with the flow of the element header -> pageView -> footer

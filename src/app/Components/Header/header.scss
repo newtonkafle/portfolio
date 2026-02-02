@@ -20,10 +20,11 @@ $screen: 768px;
     align-items: center;
     justify-content: space-between;
     padding: 0.2rem 1.7rem;
-    border: 3.5px double var(--border);
-    box-shadow: var(--shadow-double-line);
     border-radius: 8px;
     background-color: var(--surface);
+    box-shadow:
+      rgba(68, 57, 34, 0.08) 0px 1px 3px,
+      rgba(68, 57, 34, 0.16) 0px 1px 2px;
   }
 
   &__links {
@@ -35,23 +36,25 @@ $screen: 768px;
   &__link {
     position: relative;
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-highlight);
     font-size: 1rem;
     font-weight: 500;
     padding: 0.3rem 0.7rem;
     border-radius: 20px;
     border: 1px solid transparent;
-    opacity: 0.6;
-
+    opacity: 0.8;
     svg {
       width: 24px;
       height: 24px;
       display: block;
     }
 
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      transform 0.2s ease;
 
-    &_active {
+    &:active {
       font-weight: 600;
       color: var(--text-secondary);
     }
@@ -69,13 +72,17 @@ $screen: 768px;
   &__logo {
     display: flex;
     gap: 8px;
+    box-shadow:
+      rgba(68, 57, 34, 0.08) 0px 1px 3px,
+      rgba(68, 57, 34, 0.16) 0px 1px 2px;
+    border-radius: 8px;
 
     svg {
       height: 4rem;
       width: 4rem;
       display: block;
-      color: var(--text-primary);
-      opacity: 0.6;
+      color: var(--text-highlight);
+      opacity: 0.8;
     }
 
     &__link {
@@ -99,22 +106,23 @@ $screen: 768px;
   }
 
   &__theme-toggle {
-    transition: color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+    box-shadow: rgba(43, 43, 43, 0.15) 0px 3px 3px 0px;
+    border-radius: 10px;
+    transition: all 0.6s ease;
 
     svg {
       display: block;
       height: 1.5rem;
       width: 1.5rem;
-      color: var(--text-primary);
+      color: var(--text-highlight);
       padding: 0.3rem 0.7rem;
-      opacity: 0.6;
+      opacity: 0.8;
 
       &:hover {
         opacity: 1;
-        border: 1px solid var(--border);
-        border-radius: 20px;
+        border-radius: 10px;
         background-color: transparent;
-        transform: translateY(-3px);
+        transform: translateY(-2px);
       }
     }
   }

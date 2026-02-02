@@ -4,12 +4,21 @@
   grid-template-areas: "header header" "main view" "footer footer";
   max-width: 1300px;
   width: 1300px;
-  height: calc(100vh - 1rem);
-  min-height: calc(100vh - 1rem);
+  height: 100dvh;
+  min-height: 100dvh;
   margin: 1rem auto 0 auto;
+  overflow: hidden;
+
   background-color: var(--outer-bg);
-  border: 3.5px double var(--border);
-  box-shadow: var(--shadow-dobule-line);
+  box-shadow:
+    rgba(214, 110, 15, 0.4) -5px 5px,
+    rgba(214, 110, 15, 0.3) -10px 10px,
+    rgba(214, 110, 15, 0.2) -15px 15px,
+    rgba(214, 110, 15, 0.1) -20px 20px,
+    rgba(214, 110, 15, 0.05) -25px 25px;
+
+  border: 1px solid rgba(214, 110, 15, 0.2); /* Adds a crisp edge */
+
   border-radius: 8px;
 
   &__background {
@@ -34,12 +43,12 @@
       width: 120%;
       height: 120%;
       opacity: 0.4; // Adjust visibility here
-      overflow: visible;
+      overflow: hidden;
 
       /* Dense Plexus SVG Pattern */
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23BBAB8C' stroke-width='0.6' stroke-opacity='0.7'%3E%3Cpath d='M10 40 L50 20 L90 50 L130 10 L180 40 L200 20'/%3E%3Cpath d='M0 80 L40 100 L80 70 L120 110 L170 80 L200 120'/%3E%3Cpath d='M20 150 L70 130 L110 160 L160 140 L200 170'/%3E%3Cpath d='M50 20 L40 100 L70 130'/%3E%3Cpath d='M90 50 L80 70 L110 160'/%3E%3Cpath d='M130 10 L120 110 L160 140'/%3E%3Cpath d='M180 40 L170 80 L200 170'/%3E%3C/g%3E%3Cg fill='%23BBAB8C'%3E%3Ccircle cx='50' cy='20' r='1.5'/%3E%3Ccircle cx='90' cy='50' r='1.5'/%3E%3Ccircle cx='130' cy='10' r='1.5'/%3E%3Ccircle cx='40' cy='100' r='1.5'/%3E%3Ccircle cx='80' cy='70' r='1.5'/%3E%3Ccircle cx='120' cy='110' r='1.5'/%3E%3Ccircle cx='70' cy='130' r='1.5'/%3E%3Ccircle cx='110' cy='160' r='1.5'/%3E%3Ccircle cx='160' cy='140' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23BBAB8C' stroke-width='0.4' stroke-opacity='0.5'%3E%3Cpath d='M10 40 L50 20 L90 50 L130 10 L180 40 L200 20'/%3E%3Cpath d='M0 80 L40 100 L80 70 L120 110 L170 80 L200 120'/%3E%3Cpath d='M20 150 L70 130 L110 160 L160 140 L200 170'/%3E%3Cpath d='M50 20 L40 100 L70 130'/%3E%3Cpath d='M90 50 L80 70 L110 160'/%3E%3Cpath d='M130 10 L120 110 L160 140'/%3E%3Cpath d='M180 40 L170 80 L200 170'/%3E%3C/g%3E%3Cg fill='%23BBAB8C'%3E%3Ccircle cx='50' cy='20' r='1.5'/%3E%3Ccircle cx='90' cy='50' r='1.5'/%3E%3Ccircle cx='130' cy='10' r='1.5'/%3E%3Ccircle cx='40' cy='100' r='1.5'/%3E%3Ccircle cx='80' cy='70' r='1.5'/%3E%3Ccircle cx='120' cy='110' r='1.5'/%3E%3Ccircle cx='70' cy='130' r='1.5'/%3E%3Ccircle cx='110' cy='160' r='1.5'/%3E%3Ccircle cx='160' cy='140' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 
-      background-size: 450px 400px; // Controls the density of the repeat
+      background-size: 400px 450px; // Controls the density of the repeat
 
       /* Animation for that organic floating feel */
       animation: plexus-drift 25s infinite ease-in-out;

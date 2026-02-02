@@ -8,21 +8,34 @@ const routes: { [key: string]: () => HTMLElement } = {
 };
 export const initRouter = (appElement: HTMLElement) => {
   const handleRoute = () => {
-    //get the current path from hash
-    const path = window.location.hash.slice(1) || "/";
+    // get the real path
+    const path = window.location.pathname;
+
+    // check if the user typed route exist other wise retured to home.
+    if (!routes[path]) {
+      window.history.replaceState({}, "", "/");
+      handleRoute();
+      return;
+    }
 
     // clear the current content
     appElement.innerHTML = "";
 
     // get the page function or default to home
-    const pageFunction = routes[path] || routes["/"];
-
+    const pageFunction = routes[path];
     // append the new page
     appElement.appendChild(pageFunction());
   };
 
-  window.addEventListener("hashchange", handleRoute);
+  window.addEventListener("popstate", handleRoute);
 
   // handile initial load
   handleRoute();
+};
+
+// helper function to navigate without refreshing the page
+export const navigate = (path: string) => {
+  window.history.pushState({}, "", path);
+  const navEvent = new PopStateEvent("popstate");
+  window.dispatchEvent(navEvent);
 };

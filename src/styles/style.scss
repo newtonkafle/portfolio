@@ -21,27 +21,40 @@ body {
   background-size: 300px 450px; // Controls the density of the repeat
 }
 
+%heading-base {
+  padding: 0;
+  margin: 0;
+}
 h1 {
   font-size: 2.75rem;
+
+  @extend %heading-base;
 }
 
 h2 {
   font-size: 2.25rem;
+
+  @extend %heading-base;
 }
 
 h3 {
   font-size: 1.75rem;
+
+  @extend %heading-base;
 }
 
 h4 {
   font-size: 1.375rem;
+  @extend %heading-base;
 }
 
 h5 {
+  @extend %heading-base;
   font-size: 1.125rem;
 }
 
 h6 {
+  @extend %heading-base;
   font-size: 1rem;
 }
 

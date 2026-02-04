@@ -1,4 +1,4 @@
-import "./_skills.scss";
+import "./_marquee.scss";
 
 interface HardSkills {
   name: string;
@@ -21,27 +21,25 @@ export function createSkillsBar(skills: skills) {
       <div class="skills__soft__item">
         <span class="skills__dot"></span>
         <span class="skills__text">${skill}</span>
-      </div>`
+      </div>`,
     )
     .join("");
 
-  const hardSkillsHTML = (skills?.hardSkills || [])
-    .map(
-      (skill: any) => `
-      <div class="skills__hard__item">
-        <span class="skills__dot"></span>
-        <span class="skills__text">${skill.name}</span>
-      </div>`
-    )
-    .join("");
+  // const hardSkillsHTML = (skills?.hardSkills || [])
+  //   .map(
+  //     (skill: any) => `
+  //     <div class="skills__hard__item">
+  //       <span class="skills__dot"></span>
+  //       <span class="skills__text">${skill.name}</span>
+  //     </div>`,
+  //   )
+  //   .join("");
 
   section.innerHTML = `
     <div class="skills__soft">
         ${softSkillsHTML}
     </div>
-    <div class="skills__hard">
-        ${hardSkillsHTML}${hardSkillsHTML}
-    </div>
+  
   `;
 
   return section;

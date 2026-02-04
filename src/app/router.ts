@@ -1,10 +1,12 @@
 import createAbout from "./Pages/About/About";
 import { createHome } from "./Pages/Home/Home";
+import { createProjects } from "./Pages/Projects/Projects";
 
 //define routes here
 const routes: { [key: string]: () => HTMLElement } = {
   "/": createHome,
   "/about": createAbout,
+  "/projects": createProjects,
 };
 export const initRouter = (appElement: HTMLElement) => {
   const handleRoute = () => {

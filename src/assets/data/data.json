@@ -30,60 +30,48 @@
     "copyright": "Copyright 2023. Made by Elias",
     "media": "Media"
   },
-  "projects": {
-    "chertnodes": {
-      "name": "ChertNodes",
-      "description": "Minecraft servers hosting"
+  "projects": [
+    {
+      "id": 1,
+      "title": "Social Collaboration Platform",
+      "description": "A full-stack Django student networking site. Built with a containerized Docker architecture and hosted on AWS with a PostgreSQL RDS database.",
+      "tech_stack": ["Django", "Docker", "AWS", "PostgreSQL"],
+      "github_link": "https://github.com/yourusername/social-platform",
+      "image": "/src/assets/images/social_platform.jpg"
     },
-    "protectx": {
-      "name": "ProtectX web",
-      "description": "Discord anti-crash bot"
+    {
+      "id": 2,
+      "title": "Recipe Management API",
+      "description": "A RESTful API utilizing Django Rest Framework and Nginx. Features secure Token Authentication and automated documentation via Swagger.",
+      "tech_stack": ["Django", "PostgreSQL", "Nginx", "Docker", "Swagger"],
+      "github_link": "https://github.com/yourusername/recipe-api",
+      "image": "/src/assets/images/recipe-api.png"
     },
-    "khanswers": {
-      "name": "Kahoot Answers",
-      "description": "Get answers from kahoot quiz"
+    {
+      "id": 3,
+      "title": "Sentiment Analysis Model",
+      "description": "A Neural Network built with TensorFlow to analyze Amazon reviews. Includes a Flask web interface for real-time sentiment categorization.",
+      "tech_stack": ["TensorFlow", "Scikit-Learn", "Python", "Flask"],
+      "github_link": "https://github.com/yourusername/sentiment-analysis",
+      "image": "/src/assets/images/sentient_analysis.png"
     },
-    "kotikbot": {
-      "name": "KotikBot",
-      "description": "Landing for multi-functional cute discord bot"
+    {
+      "id": 4,
+      "title": "TypeScript Portfolio",
+      "description": "A personal portfolio built with Vanilla TypeScript and SCSS to master BEM architecture and responsive frontend engineering.",
+      "tech_stack": ["TypeScript", "SCSS", "HTML5"],
+      "github_link": "https://github.com/yourusername/portfolio",
+      "image": "/src/assets/images/portfolio.png"
     },
-    "portfolio": {
-      "name": "This Portfolio",
-      "description": "My personal portfolio"
-    },
-    "blog": {
-      "name": "My blog",
-      "description": "Front-end of my future blog website"
-    },
-    "discordbot": {
-      "name": "Discord Bot Boilerplate",
-      "description": "Start creating scalable discord.js bot with typescript in seconds"
-    },
-    "chesspro": {
-      "name": "Chess PRO",
-      "description": "Landing page about service for viewing chess tournaments"
-    },
-    "ooku": {
-      "name": "Ooku",
-      "description": "Link shortener with discord auth"
-    },
-    "madhost": {
-      "name": "MadHost",
-      "description": "Minecraft and websites hosting with low prices"
-    },
-    "feedrum": {
-      "name": "Feedrum",
-      "description": "Ukrainian social network designed for programmers"
-    },
-    "deplos": {
-      "name": "Deplos",
-      "description": "Game servers hosting"
-    },
-    "pixel-battle": {
-      "name": "Pixel Battle",
-      "description": "Pixel art battle game"
+    {
+      "id": 5,
+      "title": "Django SaaS Project",
+      "description": "A subscription management system integrated with Stripe. Focused on mastering Django’s built-in authentication, roles, and permissions.",
+      "tech_stack": ["Django", "Stripe API", "PostgreSQL"],
+      "github_link": "https://github.com/yourusername/saas-project",
+      "image": "saas.jpg"
     }
-  },
+  ],
   "hero": {
     "name": "Newton",
     "title": "Junior Developer",
@@ -116,71 +104,46 @@
       "Organization",
       "Dependability"
     ],
+
     "hardSkills": [
       {
-        "name": "Python",
-        "detail_title": "Scripting & Automation",
-        "description": "Developing robust backends and automation scripts with a focus on clean, PEP8-compliant code.",
-        "category": "language"
+        "title": "Backend",
+        "icon": "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><circle cx=\"23\" cy=\"23\" r=\"1\"></circle><rect x=\"8\" y=\"22\" width=\"12\" height=\"2\"></rect><circle cx=\"23\" cy=\"9\" r=\"1\"></circle><rect x=\"8\" y=\"8\" width=\"12\" height=\"2\"></rect><path d=\"M26,14a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2H6A2,2,0,0,0,4,6v6a2,2,0,0,0,2,2H8v4H6a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V20a2,2,0,0,0-2-2H24V14ZM6,6H26v6H6ZM26,26H6V20H26Zm-4-8H10V14H22Z\"></path></svg>",
+        "skills": ["Django", "C#", "ASP.NET Core", "Python", "System Design"]
       },
       {
-        "name": "C#",
-        "detail_title": "Enterprise Logic",
-        "description": "Building scalable server-side applications and complex business logic using the .NET ecosystem.",
-        "category": "language"
+        "title": "Frontend",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\"></line><line x1=\"9\" y1=\"21\" x2=\"9\" y2=\"9\"></line></svg>",
+        "skills": [
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Tailwind / SCSS",
+          "UI Logic"
+        ]
       },
       {
-        "name": "ASP.NET Core",
-        "detail_title": "Web API Development",
-        "description": "Architecting RESTful services with high security standards and middleware optimization.",
-        "category": "framework"
+        "title": "Database",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>",
+        "skills": ["PostgreSQL", "MongoDB", "DynamoDB", "Redis", "ElastiCache"]
       },
       {
-        "name": "TypeScript",
-        "detail_title": "Typed Architecture",
-        "description": "Implementing type-safe frontend and backend logic to reduce runtime errors and improve maintainability.",
-        "category": "language"
-      },
-      {
-        "name": "PostgreSQL",
-        "detail_title": "Database Design",
-        "description": "Expertise in relational modeling, indexing strategies, and writing high-performance SQL queries.",
-        "category": "database"
-      },
-      {
-        "name": "AWS",
-        "detail_title": "Cloud Infrastructure",
-        "description": "Deploying and managing scalable environments using EC2, S3, and Lambda functions.",
-        "category": "cloud"
-      },
-      {
-        "name": "Docker",
-        "detail_title": "Containerization",
-        "description": "Creating consistent development environments and streamlining CI/CD deployment pipelines.",
-        "category": "devops"
-      },
-      {
-        "name": "Linux",
-        "detail_title": "System Administration",
-        "description": "Managing remote servers, bash scripting, and optimizing environment configurations.",
-        "category": "os"
-      },
-      {
-        "name": "Nginx",
-        "detail_title": "Traffic Management",
-        "description": "Configuring reverse proxies, load balancing, and SSL termination for secure web traffic.",
-        "category": "devops"
-      },
-      {
-        "name": "System Design",
-        "detail_title": "Scalable Architecture",
-        "description": "Designing distributed systems that prioritize availability, reliability, and low latency.",
-        "category": "architecture"
+        "title": "Infrastructure",
+        "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\"></rect><rect x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\"></rect><line x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\"></line><line x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\"></line></svg>",
+        "skills": [
+          "AWS",
+          "Docker",
+          "GitHub Actions",
+          "Nginx",
+          "Proxmox",
+          "Virtualization",
+          "Linux"
+        ]
       }
     ]
   },
   "education": {
-    "icon": "<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' class='svg-icon'><g fill='currentColor'><path d='M17.673 5.606a3326.02 3326.02 0 0 1-5.671-2.674L.138 8.524l2.03.98L2 9.531V20h1v-9.626l.72-.124.28.135v5.288c0 .914 5.206 3.533 6.249 4.049a3.89 3.89 0 0 0 3.48-.026C20 16.486 20 15.895 20 15.673v-5.288l3.854-1.857s-3.8-1.801-6.181-2.922zM19 15.504a51.526 51.526 0 0 1-5.726 3.302 2.884 2.884 0 0 1-2.582.02A40.184 40.184 0 0 1 5 15.521v-4.655l7 3.373 7-3.373zm-7-2.373L5.416 9.958l6.469-1.115-.17-.987-7.85 1.354-1.403-.676 9.537-4.495c.825.393 8.523 4.014 9.542 4.494z'></path></g></svg>",
+    "icon": "<svg viewBox=\"0 0 1024 1024\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><path d=\"M197.769 791.767l60.672-286.853c2.341-11.066-4.733-21.934-15.799-24.275s-21.934 4.733-24.275 15.799l-60.672 286.853c-2.341 11.066 4.733 21.934 15.799 24.275s21.934-4.733 24.275-15.799zm571.063-286.786l61.778 287.068c2.38 11.058 13.273 18.093 24.33 15.713s18.093-13.273 15.713-24.33l-61.778-287.068c-2.38-11.058-13.273-18.093-24.33-15.713s-18.093 13.273-15.713 24.33z\"></path><path d=\"M967.45 386.902L535.9 208.126c-10.609-4.399-30.569-4.442-41.207-.088L57.821 386.901l436.881 178.857c10.624 4.355 30.583 4.313 41.207-.085L967.45 386.901zM551.583 603.516c-20.609 8.533-51.787 8.599-72.409.145L24.437 417.494c-32.587-13.359-32.587-47.847.009-61.188l454.73-186.174c20.641-8.448 51.818-8.382 72.407.156l448.836 185.936c32.466 13.442 32.466 47.913.004 61.354l-448.84 185.938zm288.673 166.569c-98 57.565-209.669 88.356-325.888 88.356-116.363 0-228.162-30.866-326.246-88.564-9.749-5.735-22.301-2.481-28.036 7.268s-2.481 22.301 7.268 28.036c104.336 61.377 223.297 94.22 347.014 94.22 123.564 0 242.386-32.763 346.634-93.998 9.753-5.729 13.015-18.279 7.286-28.032s-18.279-13.015-28.032-7.286z\"></path><path d=\"M983.919 383.052v296.233c0 11.311 9.169 20.48 20.48 20.48s20.48-9.169 20.48-20.48V383.052c0-11.311-9.169-20.48-20.48-20.48s-20.48 9.169-20.48 20.48z\"></path></svg>",
     "listOfDegree": [
       {
         "degree": "Bachelor of Information Technology",

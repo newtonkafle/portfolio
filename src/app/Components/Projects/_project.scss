@@ -1,0 +1,86 @@
+$primary-color: #2563eb;
+$border-color: #e5e7eb;
+$card-bg: #b6b4b1;
+$card-accent: #d6d3cc;
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: linear-gradient(150deg, var(--outer-bg) 0%, $card-bg 100%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  min-height: 200px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #f1d7c0;
+  }
+
+  &__content {
+    flex: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    color: var(--text-highlight);
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  &__links {
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    background-color: $card-accent;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    &__image {
+      height: 200px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.project-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 9rem);
+  width: 100%;
+  gap: 1rem;
+
+  &__left-view {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* A warm, tinted shadow that complements your accent color */
+    /* A soft, earthy shadow that feels natural on your orange-cream surface */
+    box-shadow: rgba(145, 95, 45, 0.18) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    overflow-y: auto;
+    // background: linear-gradient(
+    //   to right,
+    //   var(--surface) 0%,
+    //   var(--bg) 50%,
+    //   var(--outer-bg) 100%
+    // );
+  }
+
+  &__right-view {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+}

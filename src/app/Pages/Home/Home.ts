@@ -1,7 +1,7 @@
 import "./_home.scss";
 import { createHero } from "../../Components/Hero/hero";
 import data from "../../../assets/data/data.json";
-import { createSkillsBar } from "../../Components/Skills/skill";
+import { createSkillsBar } from "../../Components/Marquee/Marquee";
 
 export function createHome(): HTMLElement {
   const home = document.createElement("div");

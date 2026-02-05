@@ -7,7 +7,7 @@ $card-accent: #d6d3cc;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  background: linear-gradient(150deg, var(--outer-bg) 0%, $card-bg 100%);
+  background: linear-gradient(150deg, var(--outer-bg) 0%, #d8b697 100%);
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
@@ -20,7 +20,7 @@ $card-accent: #d6d3cc;
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background: #f1d7c0;
+    background: #afa9a2;
   }
 
   &__content {
@@ -45,18 +45,33 @@ $card-accent: #d6d3cc;
   }
 
   &__links {
+    svg {
+      width: 25px;
+      height: 25px;
+      color: var(--text-highlight);
+    }
     .btn-github {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: $primary-color;
+      color: var(--text-highlight);
+      background-color: var(--accent);
+      border-radius: 10px;
+      border: 2px solid var(--accent);
+      padding: 0.2rem 0.4rem;
+      opacity: 0.8;
       text-decoration: none;
       font-weight: 500;
+      font-size: 0.9rem;
       transition: opacity 0.2s;
 
       &:hover {
-        text-decoration: underline;
-        opacity: 0.8;
+        opacity: 1;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
       }
     }
   }

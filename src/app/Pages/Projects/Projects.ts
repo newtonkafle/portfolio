@@ -3,6 +3,7 @@ import { createProject } from "../../Components/Projects/Project";
 import "./_projects.scss";
 import data from "../../../assets/data/data.json";
 import { createSkills } from "../../Components/Skills/Skills";
+import { initSkillsHighlight } from "@/app/Utils/ProjectSkillsHoverLogic";
 
 export function createProjects() {
   const projects_container = document.createElement("div");
@@ -23,5 +24,10 @@ export function createProjects() {
 
   projects_container.appendChild(left_view);
   projects_container.appendChild(right_view);
+
+  //adding the logic to highlight skills tag when hover on the project card
+  requestAnimationFrame(() => {
+    initSkillsHighlight();
+  });
   return projects_container;
 }

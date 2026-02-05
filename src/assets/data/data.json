@@ -35,40 +35,106 @@
       "id": 1,
       "title": "Social Collaboration Platform",
       "description": "A full-stack Django student networking site. Built with a containerized Docker architecture and hosted on AWS with a PostgreSQL RDS database.",
-      "tech_stack": ["Django", "Docker", "AWS", "PostgreSQL"],
-      "github_link": "https://github.com/yourusername/social-platform",
+      "tech_stack": [
+        "Python",
+        "Django",
+        "Docker",
+        "AWS",
+        "Relational Database"
+      ],
+      "tools": [
+        "EC2",
+        "Gunicorn",
+        "Docker Compose",
+        "Nginx",
+        "PostgreSQL",
+        "REST APIs"
+      ],
+      "github_link": "https://github.com/newtonkafle/project_social_platform",
       "image": "/src/assets/images/social_platform.jpg"
     },
     {
       "id": 2,
       "title": "Recipe Management API",
       "description": "A RESTful API utilizing Django Rest Framework and Nginx. Features secure Token Authentication and automated documentation via Swagger.",
-      "tech_stack": ["Django", "PostgreSQL", "Nginx", "Docker", "Swagger"],
-      "github_link": "https://github.com/yourusername/recipe-api",
+      "tools": [
+        "Django Rest Framework",
+        "JWT Authentication",
+        "PostgreSQL",
+        "REST APIs",
+        "Nginx Reverse Proxy",
+        "Amazon EC2",
+        "Swagger UI"
+      ],
+      "tech_stack": [
+        "Python",
+        "AWS",
+        "Django",
+        "Relational Database",
+        "Docker",
+        "CI/CD",
+        "Linux"
+      ],
+      "github_link": "https://github.com/newtonkafle/recipe-app-api",
       "image": "/src/assets/images/recipe-api.png"
     },
     {
       "id": 3,
       "title": "Sentiment Analysis Model",
       "description": "A Neural Network built with TensorFlow to analyze Amazon reviews. Includes a Flask web interface for real-time sentiment categorization.",
-      "tech_stack": ["TensorFlow", "Scikit-Learn", "Python", "Flask"],
-      "github_link": "https://github.com/yourusername/sentiment-analysis",
+      "tools": [
+        "Pandas",
+        "NumPy",
+        "Flask",
+        "Seaborne",
+        "Matplotlib",
+        "TensorFlow",
+        "Sckit Learn"
+      ],
+      "tech_stack": [
+        "Python",
+        "Machine Learning",
+        "Data Analytics",
+        "Data Visualization"
+      ],
+      "github_link": "https://github.com/newtonkafle/natural_language_processing",
       "image": "/src/assets/images/sentient_analysis.png"
     },
     {
       "id": 4,
       "title": "TypeScript Portfolio",
       "description": "A personal portfolio built with Vanilla TypeScript and SCSS to master BEM architecture and responsive frontend engineering.",
-      "tech_stack": ["TypeScript", "SCSS", "HTML5"],
-      "github_link": "https://github.com/yourusername/portfolio",
+      "tech_stack": ["TypeScript", "SCSS", "UI Logic", "JavaScript"],
+      "tools": [
+        "SPA Architecture",
+        "Client-Side Routing",
+        "Modular SCSS",
+        "JSON Data Fetching",
+        "Vite"
+      ],
+      "github_link": "https://github.com/newtonkafle/portfolio",
       "image": "/src/assets/images/portfolio.png"
     },
     {
       "id": 5,
       "title": "Django SaaS Project",
       "description": "A subscription management system integrated with Stripe. Focused on mastering Django’s built-in authentication, roles, and permissions.",
-      "tech_stack": ["Django", "Stripe API", "PostgreSQL"],
-      "github_link": "https://github.com/yourusername/saas-project",
+      "tech_stack": [
+        "Django",
+        "Auth & Authz",
+        "System Design",
+        "UI Logic",
+        "Django ORM",
+        "REST API"
+      ],
+      "tools": [
+        "Stripe API",
+        "RBAC (Roles)",
+        "Custom User Model",
+        "Webhook Integration",
+        "Django Admin"
+      ],
+      "github_link": "https://github.com/newtonkafle/saas_project",
       "image": "saas.jpg"
     }
   ],
@@ -109,7 +175,14 @@
       {
         "title": "Backend",
         "icon": "<svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"currentColor\"><circle cx=\"23\" cy=\"23\" r=\"1\"></circle><rect x=\"8\" y=\"22\" width=\"12\" height=\"2\"></rect><circle cx=\"23\" cy=\"9\" r=\"1\"></circle><rect x=\"8\" y=\"8\" width=\"12\" height=\"2\"></rect><path d=\"M26,14a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2H6A2,2,0,0,0,4,6v6a2,2,0,0,0,2,2H8v4H6a2,2,0,0,0-2,2v6a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V20a2,2,0,0,0-2-2H24V14ZM6,6H26v6H6ZM26,26H6V20H26Zm-4-8H10V14H22Z\"></path></svg>",
-        "skills": ["Django", "C#", "ASP.NET Core", "Python", "System Design"]
+        "skills": [
+          "C#",
+          "Python",
+          "Django",
+          "REST APIs",
+          "System Design",
+          "ASP.NET Core"
+        ]
       },
       {
         "title": "Frontend",
